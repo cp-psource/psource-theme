@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="{{ "/assets/style.css" | relative_url }}">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
   <header>
@@ -14,9 +14,26 @@
     </nav>
   </header>
 
-  <main>
-    {{ content }}
-  </main>
+  <div class="content-wrapper" style="display: flex; gap: 2rem;">
+    <main style="flex: 2;">
+      {{ content }}
+    </main>
+
+    <aside class="sidebar" style="flex: 1;">
+      <section class="widget">
+        <h3>🔗 Nützliche Links</h3>
+        <ul>
+          <li><a href="#">Dokumentation</a></li>
+          <li><a href="#">Forum</a></li>
+        </ul>
+      </section>
+
+      <section class="widget">
+        <h3>📰 Neuigkeiten</h3>
+        <p>Letztes Update: April 2025</p>
+      </section>
+    </aside>
+  </div>
 
   <footer class="psource-footer">
     <p>
@@ -25,4 +42,3 @@
     </p>
   </footer>
 </body>
-</html>
